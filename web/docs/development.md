@@ -1,6 +1,6 @@
 # 開発環境構築
 
-Node.jsを導入してください.
+Node.jsを導入してください. バージョンは[.tool-versions](../.tool-versions)を参照.
 
 ## セットアップ
 
