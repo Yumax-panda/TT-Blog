@@ -23,3 +23,15 @@ $ npm run dev
 ```shell
 $ npm run build
 ```
+
+### lint
+
+```shell
+$ npm run lint
+```
+
+### 型チェック
+
+```shell
+$ npm run type-check
+```
