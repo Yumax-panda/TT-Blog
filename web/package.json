@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier . --check",
-    "format:fix": "prettier . --write"
+    "format:fix": "prettier . --write",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "vue": "^3.4.37"
