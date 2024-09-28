@@ -22,8 +22,8 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ./.tool-versions
-          cache: npm
+          # defaults.run.working-directoryからではなく, ルートディレクトリからの相対パスを指定する
+          node-version-file: web/.tool-versions
       - name: check npm ci
         run: npm ci
   lint:
@@ -36,8 +36,7 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ./.tool-versions
-          cache: npm
+          node-version-file: web/.tool-versions
       - name: npm ci
         run: npm ci
       - name: run lint
@@ -52,8 +51,7 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ./.tool-versions
-          cache: npm
+          node-version-file: web/.tool-versions
       - name: npm ci
         run: npm ci
       - name: run format
@@ -68,8 +66,7 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ./.tool-versions
-          cache: npm
+          node-version-file: web/.tool-versions
       - name: npm ci
         run: npm ci
       - name: run type-check
@@ -84,8 +81,7 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: ./.tool-versions
-          cache: npm
+          node-version-file: web/.tool-versions
       - name: npm ci
         run: npm ci
       - name: run build
