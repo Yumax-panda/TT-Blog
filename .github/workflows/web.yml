@@ -10,14 +10,13 @@ on:
 
 defaults:
   run:
-    working-directory: web
+    working-directory: ./web
 
 jobs:
   packages:
     name: check npm install
     runs-on: ubuntu-latest
     steps:
-      - run: pwd && ls -a
       - name: checkout
         uses: actions/checkout@v4
       - name: setup Node
