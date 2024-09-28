@@ -12,7 +12,7 @@ $ npm install
 
 詳細は[package.json](../package.json)を参照
 
-###　ホットリロード環境で起動
+### ホットリロード環境で起動
 
 ```shell
 $ npm run dev
