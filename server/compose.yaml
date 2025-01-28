@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   server:
     build:
@@ -22,8 +20,7 @@ services:
       - mysql
 
   mysql:
-    image: mysql:latest
-    container_name: mysql
+    image: mysql:9.2.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
