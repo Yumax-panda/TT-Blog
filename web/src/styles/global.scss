@@ -1,0 +1,18 @@
+@forward 'reset';
+
+body {
+  font-family: 'Hiragino Sans', 'Inter', 'M PLUS 1p', 'Avenir', 'Helvetica Neue',
+    'Helvetica', 'Arial', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic',
+    'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  touch-action: manipulation;
+  overscroll-behavior-y: contain;
+}
+
+img {
+  image-orientation: from-image;
+}
