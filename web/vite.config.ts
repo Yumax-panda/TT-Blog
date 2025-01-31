@@ -20,5 +20,19 @@ export default defineConfig({
         rewrite: (path: string) => path.replace(/^\/api/, '/')
       }
     }
+  },
+  css: {
+    devSourcemap: true,
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+        @use "sass:math";
+        @use "/@/styles/common.scss" as *;
+      `,
+        charset: false,
+        // https://sass-lang.com/documentation/breaking-changes/legacy-js-api/#bundlers
+        api: 'modern-compiler'
+      }
+    }
   }
 })
