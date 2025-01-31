@@ -5,7 +5,7 @@ export enum RouteName {
   Index = 'index'
 }
 
-const MainPage = () => import('../views/MainPage.vue')
+const MainPage = () => import('/@/views/MainPage.vue')
 
 const routes: RouteRecordRaw[] = [
   {
