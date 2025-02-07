@@ -39,7 +39,7 @@ $inkling-ratio: calc(348 / 492);
 }
 
 .message-wrapper {
-  gap: 1rem;
+  gap: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -75,8 +75,8 @@ $inkling-ratio: calc(348 / 492);
   height: calc(90vw * $inkling-ratio);
 
   @include mq(sm) {
-    width: min(400px, 40vw);
-    height: calc(min(400px, 40vw) * $inkling-ratio);
+    width: clamp(250px, 30vw, 500px);
+    height: calc(clamp(250px, 30vw, 500px) * $inkling-ratio);
   }
 }
 </style>
