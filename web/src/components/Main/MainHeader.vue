@@ -1,7 +1,7 @@
 <template>
   <header :class="$style.container">
     <div :class="$style.inner">
-      <img :src="egg" />
+      <img :src="egg" alt="Yoshi's egg" />
       <span>東工大マリオカートサークル</span>
     </div>
   </header>
@@ -34,9 +34,11 @@ $header-background-color: #2f6665;
   margin: auto;
   margin-left: 12px;
   display: flex;
+  gap: 5px;
   height: 24px;
   line-height: 24px;
   @include mq(md) {
+    gap: 10px;
     height: 40px;
     line-height: 40px;
   }

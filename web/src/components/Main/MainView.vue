@@ -1,10 +1,13 @@
 <template>
-  <main-header />
-  <div :class="$style.container"></div>
+  <div :class="$style.container">
+    <main-header />
+    <welcome-section />
+  </div>
 </template>
 
 <script lang="ts" setup>
 import MainHeader from './MainHeader.vue'
+import WelcomeSection from './WelcomeSection.vue'
 </script>
 
 <style lang="scss" module>

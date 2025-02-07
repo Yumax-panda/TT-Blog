@@ -32,6 +32,12 @@
 
 // -----
 
+@mixin bg-color-common-white-primary {
+  background-color: variables.$common-text-white-primary;
+}
+
+// -----
+
 @mixin mq($breakpoint) {
   @media #{map.get(variables.$breakpoints, $breakpoint)} {
     @content;
