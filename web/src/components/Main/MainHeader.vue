@@ -1,9 +1,11 @@
 <template>
-  <header :class="$style.container">
-    <div :class="$style.inner">
-      <img :src="egg" alt="Yoshi's egg" />
-      <span>東工大マリオカートサークル</span>
-    </div>
+  <header>
+    <router-link :to="'/'" :class="$style.container">
+      <div :class="$style.inner">
+        <img :src="egg" alt="Yoshi's egg" />
+        <span>東工大マリオカートサークル</span>
+      </div>
+    </router-link>
   </header>
 </template>
 

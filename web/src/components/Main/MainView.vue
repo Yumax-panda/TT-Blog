@@ -2,10 +2,12 @@
   <div :class="$style.container">
     <main-header />
     <welcome-section />
+    <main-section />
   </div>
 </template>
 
 <script lang="ts" setup>
+import MainSection from './MainSection/MainSection.vue'
 import MainHeader from './MainHeader.vue'
 import WelcomeSection from './WelcomeSection.vue'
 </script>
