@@ -5,6 +5,9 @@ export enum RouteName {
   Index = 'index'
 }
 
+export const constructPostDetailPagePath = (id: string) =>
+  `/posts/${id}` as const
+
 const MainPage = () => import('/@/views/MainPage.vue')
 
 const routes: RouteRecordRaw[] = [
