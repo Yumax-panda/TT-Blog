@@ -4,14 +4,14 @@
       <span :class="$style.title">最新情報</span>
     </div>
     <div :class="$style.content">
-      <latest-news-list />
+      <headline-list />
       <twitter-embed />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import LatestNewsList from './LatestNewsList.vue'
+import HeadlineList from './HeadlineList.vue'
 import TwitterEmbed from './TwitterEmbed.vue'
 </script>
 

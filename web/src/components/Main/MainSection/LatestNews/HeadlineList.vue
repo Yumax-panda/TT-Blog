@@ -1,13 +1,13 @@
 <template>
   <div :class="$style.panel">
     <template v-for="post in posts" :key="post.postId">
-      <latest-news-panel-row v-bind="post" />
+      <headline-entry v-bind="post" />
     </template>
   </div>
 </template>
 
 <script lang="ts" setup>
-import LatestNewsPanelRow from './LatestNewsPanelRow.vue'
+import HeadlineEntry from './HeadlineEntry.vue'
 import { ref } from 'vue'
 
 type Row = {

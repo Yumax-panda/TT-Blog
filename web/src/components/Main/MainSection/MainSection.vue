@@ -1,11 +1,11 @@
 <template>
   <div :class="$style.container">
-    <latest-news-section />
+    <latest-news />
   </div>
 </template>
 
 <script lang="ts" setup>
-import LatestNewsSection from './LatestNewsSection.vue'
+import LatestNews from './LatestNews/LatestNews.vue'
 </script>
 
 <style lang="scss" module>
