@@ -12,12 +12,18 @@ export const constructPostDetailPagePath = (id: string) =>
   `/posts/${id}` as const
 
 const MainPage = () => import('/@/views/MainPage.vue')
+const AboutPage = () => import('/@/views/AboutPage.vue')
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: RouteName.Index,
     component: MainPage
+  },
+  {
+    path: '/about',
+    name: RouteName.About,
+    component: AboutPage
   }
 ]
 
