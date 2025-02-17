@@ -2,7 +2,10 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 
 export enum RouteName {
-  Index = 'index'
+  Index = 'index',
+  About = 'about',
+  PostList = 'page',
+  Contact = 'contact'
 }
 
 export const constructPostDetailPagePath = (id: string) =>
