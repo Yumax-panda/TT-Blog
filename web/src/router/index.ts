@@ -8,11 +8,13 @@ export enum RouteName {
   Contact = 'contact'
 }
 
-export const constructPostDetailPagePath = (id: string) =>
-  `/posts/${id}` as const
+export const constructPostDetailPath = (id: string) => `/posts/${id}` as const
+export const constructPostListPath = (pageNumber: string | number) =>
+  `/pages/${pageNumber}` as const
 
 const MainPage = () => import('/@/views/MainPage.vue')
 const AboutPage = () => import('/@/views/AboutPage.vue')
+const PostListPage = () => import('/@/views/PostListPage.vue')
 
 const routes: RouteRecordRaw[] = [
   {
@@ -24,6 +26,11 @@ const routes: RouteRecordRaw[] = [
     path: '/about',
     name: RouteName.About,
     component: AboutPage
+  },
+  {
+    path: constructPostListPath(':pageNumber(\\d+)'),
+    name: RouteName.PostList,
+    component: PostListPage
   }
 ]
 

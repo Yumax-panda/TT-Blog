@@ -6,7 +6,7 @@
           >東工大マリオカートサークル</router-link
         >
         <router-link :to="'/about'">サークルについて</router-link>
-        <router-link :to="'/pages'">記事一覧</router-link>
+        <router-link :to="constructPostListPath(1)">記事一覧</router-link>
         <router-link :to="'/contact'">お問い合わせ</router-link>
       </div>
       <div :class="$style.copy">Copyright Yumax-panda All rights reserved.</div>
@@ -14,7 +14,9 @@
   </footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { constructPostListPath } from '/@/router'
+</script>
 
 <style lang="scss" module>
 footer {

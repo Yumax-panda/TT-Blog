@@ -1,7 +1,10 @@
 <template>
   <div :class="$style.container">
     <latest-news />
-    <post-list :posts="posts" />
+    <section>
+      <div :class="$style.title">投稿記事</div>
+      <post-list :posts="posts" />
+    </section>
   </div>
 </template>
 
@@ -50,5 +53,12 @@ const posts = reactive([
   & {
     @include container;
   }
+}
+
+.title {
+  text-align: center;
+  color: white;
+  @include size-h1;
+  @include color-common-bg-green;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="constructPostDetailPagePath(postId)" :class="$style.post">
+  <router-link :to="constructPostDetailPath(postId)" :class="$style.post">
     <img
       :src="thumbnailUrl"
       :alt="`${title} feature image`"
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import { constructPostDetailPagePath } from '/@/router'
+import { constructPostDetailPath } from '/@/router'
 import { getFullDayString } from '/@/lib/basic/date'
 
 defineProps<{

@@ -1,12 +1,9 @@
 <template>
-  <section>
-    <div :class="$style.title">投稿記事</div>
-    <div :class="$style['post-list']">
-      <template v-for="post in posts" :key="post.postId">
-        <post-panel v-bind="post" />
-      </template>
-    </div>
-  </section>
+  <div :class="$style['post-list']">
+    <template v-for="post in posts" :key="post.postId">
+      <post-panel v-bind="post" />
+    </template>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -23,13 +20,6 @@ defineProps<{ posts: Row[] }>()
 </script>
 
 <style lang="scss" module>
-.title {
-  text-align: center;
-  color: white;
-  @include size-h1;
-  @include color-common-bg-green;
-}
-
 .post-list {
   display: flex;
   flex-wrap: wrap;

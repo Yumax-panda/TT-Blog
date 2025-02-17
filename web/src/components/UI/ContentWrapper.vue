@@ -13,6 +13,7 @@
 
 .content {
   margin: 5rem auto;
+  padding: 1rem auto;
   width: 80%;
 }
 </style>

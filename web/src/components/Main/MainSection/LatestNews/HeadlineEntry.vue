@@ -1,7 +1,7 @@
 <template>
   <router-link
     :class="$style['panel-row']"
-    :to="constructPostDetailPagePath(postId)"
+    :to="constructPostDetailPath(postId)"
   >
     <img
       :src="thumbnailUrl"
@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { getFullDayString } from '/@/lib/basic/date'
-import { constructPostDetailPagePath } from '/@/router'
+import { constructPostDetailPath } from '/@/router'
 
 defineProps<{
   postId: string
