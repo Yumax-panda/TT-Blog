@@ -31,8 +31,8 @@
 </template>
 
 <script lang="ts" setup>
-import ContentWrapper from '/@/components/Common/ContentWrapper.vue'
-import MainViewFrame from '/@/components/Common/MainViewFrame.vue'
+import ContentWrapper from '/@/components/UI/ContentWrapper.vue'
+import MainViewFrame from '/@/components/UI/MainViewFrame.vue'
 </script>
 
 <style lang="scss" module>

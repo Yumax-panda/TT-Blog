@@ -11,7 +11,6 @@
 
 <script lang="ts" setup>
 import PostPanel from './PostPanel.vue'
-import { ref } from 'vue'
 
 type Row = {
   title: string
@@ -20,27 +19,7 @@ type Row = {
   thumbnailUrl: string
 }
 
-// TODO: implement
-const posts = ref<Row[]>([
-  {
-    postId: '1',
-    title: 'test',
-    thumbnailUrl: 'https://avatars.githubusercontent.com/u/93650251?v=4',
-    datetime: new Date()
-  },
-  {
-    postId: '2',
-    title: 'test',
-    thumbnailUrl: 'https://avatars.githubusercontent.com/u/93650251?v=4',
-    datetime: new Date()
-  },
-  {
-    postId: '3',
-    title: 'test',
-    thumbnailUrl: 'https://avatars.githubusercontent.com/u/93650251?v=4',
-    datetime: new Date()
-  }
-])
+defineProps<{ posts: Row[] }>()
 </script>
 
 <style lang="scss" module>

@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import MainViewFrame from '/@/components/Common/MainViewFrame.vue'
+import MainViewFrame from '/@/components/UI/MainViewFrame.vue'
 import MainSection from '/@/components/Main/MainSection/MainSection.vue'
 import WelcomeSection from '/@/components/Main/WelcomeSection/WelcomeSection.vue'
 </script>
