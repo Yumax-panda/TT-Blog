@@ -1,18 +1,20 @@
 <template>
-  <div :class="$style.container">
-    <div :class="$style['message-wrapper']">
-      <div :class="$style.welcome">
-        Welcome to <span :class="$style.tt">TT !</span>
+  <div :class="$style.wrapper">
+    <div :class="$style.container">
+      <div :class="$style['message-wrapper']">
+        <div :class="$style.welcome">
+          Welcome to <span :class="$style.tt">TT !</span>
+        </div>
+        <div :class="$style.message">
+          チーム「TT」は, 東工大で活動するマリオカートサークルです.<br />
+          初心者, 上級者, 学年問わず仲良く日々活動しています.
+        </div>
+        <router-link :to="'/about'" :class="$style.link">
+          もっと詳しく!!
+        </router-link>
       </div>
-      <div :class="$style.message">
-        チーム「TT」は, 東工大で活動するマリオカートサークルです.<br />
-        初心者, 上級者, 学年問わず仲良く日々活動しています.
-      </div>
-      <router-link :to="'/about'" :class="$style.link">
-        もっと詳しく!!
-      </router-link>
+      <img :src="inkling" alt="inkling" :class="$style.inkling" />
     </div>
-    <img :src="inkling" alt="inkling" :class="$style.inkling" />
   </div>
 </template>
 
@@ -23,9 +25,12 @@ import inkling from '/@/assets/inkling.webp'
 <style lang="scss" module scoped>
 $inkling-ratio: calc(348 / 492);
 
+.wrapper {
+  background: linear-gradient(to right, #2c363f, #738da5);
+}
+
 .container {
   @include color-common-text-white-primary;
-  background: linear-gradient(to right, #2c363f, #738da5);
   padding: 12px 24px;
   display: flex;
   gap: 10px;
@@ -35,6 +40,10 @@ $inkling-ratio: calc(348 / 492);
 
   @include mq(sm) {
     flex-direction: row;
+  }
+
+  & {
+    @include container;
   }
 }
 

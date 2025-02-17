@@ -15,10 +15,17 @@ import PostList from './PostList/PostList.vue'
   display: flex;
   flex-direction: column;
   gap: 38px;
-  padding: 38px 24px 56px;
+  padding-top: 38px;
+  padding-bottom: 56px;
+
   @include mq(lg) {
     gap: 80px;
-    padding: 90px 128px;
+    padding-top: 90px;
+    padding-bottom: 128px;
+  }
+
+  & {
+    @include container;
   }
 }
 </style>

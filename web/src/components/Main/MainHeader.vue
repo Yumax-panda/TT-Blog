@@ -18,18 +18,19 @@ $header-background-color: #2f6665;
 
 header {
   top: 0;
+  width: 100%;
   position: sticky;
   z-index: 9999;
+  background-color: $header-background-color;
 }
 
 .container {
   font-weight: bold;
-  width: 100%;
   display: flex;
-  background-color: $header-background-color;
   height: 44px;
 
   @include color-common-text-white-primary;
+  @include container;
   @include mq(md) {
     height: 80px;
     font-size: 24px;

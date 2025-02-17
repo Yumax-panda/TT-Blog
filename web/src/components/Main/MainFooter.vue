@@ -1,14 +1,16 @@
 <template>
   <footer>
-    <div :class="$style.sitemap">
-      <router-link :to="'/'" :class="$style.name"
-        >東工大マリオカートサークル</router-link
-      >
-      <router-link :to="'/about'">サークルについて</router-link>
-      <router-link :to="'/posts'">記事一覧</router-link>
-      <router-link :to="'/contact'">お問い合わせ</router-link>
+    <div :class="$style.container">
+      <div :class="$style.sitemap">
+        <router-link :to="'/'" :class="$style.name"
+          >東工大マリオカートサークル</router-link
+        >
+        <router-link :to="'/about'">サークルについて</router-link>
+        <router-link :to="'/posts'">記事一覧</router-link>
+        <router-link :to="'/contact'">お問い合わせ</router-link>
+      </div>
+      <div :class="$style.copy">Copyright Yumax-panda All rights reserved.</div>
     </div>
-    <div :class="$style.copy">Copyright Yumax-panda All rights reserved.</div>
   </footer>
 </template>
 
@@ -17,12 +19,16 @@
 <style lang="scss" module>
 footer {
   border-top: solid 1px white;
+}
+
+.container {
   text-decoration: none;
   vertical-align: middle;
   display: flex;
   flex-direction: column;
   gap: 12px;
   @include color-common-text-white-primary;
+  @include container;
 }
 
 .sitemap {
