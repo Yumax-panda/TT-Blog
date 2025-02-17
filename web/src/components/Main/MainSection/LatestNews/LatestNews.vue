@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <section>
     <div :class="$style.title">最新情報</div>
     <div :class="$style.content">
       <headline-list />
       <twitter-embed />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
