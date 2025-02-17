@@ -19,6 +19,7 @@ $header-background-color: #2f6665;
 header {
   top: 0;
   position: sticky;
+  z-index: 9999;
 }
 
 .container {
