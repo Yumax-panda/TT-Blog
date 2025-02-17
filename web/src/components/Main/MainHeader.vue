@@ -49,6 +49,7 @@ header {
   height: 24px;
   line-height: 24px;
   @include mq(md) {
+    margin-left: 0;
     gap: 10px;
     height: 40px;
     line-height: 40px;
