@@ -36,7 +36,7 @@ defineProps<{
   text-decoration: none;
   width: 100%;
 
-  @include mq(md) {
+  @include mq(sm) {
     width: calc(33.33333% - 3px);
   }
 }
