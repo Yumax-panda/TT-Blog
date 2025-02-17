@@ -1,11 +1,13 @@
 <template>
   <div :class="$style.container">
     <latest-news />
+    <post-list />
   </div>
 </template>
 
 <script lang="ts" setup>
 import LatestNews from './LatestNews/LatestNews.vue'
+import PostList from './PostList/PostList.vue'
 </script>
 
 <style lang="scss" module>
