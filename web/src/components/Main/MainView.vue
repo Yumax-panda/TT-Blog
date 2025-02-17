@@ -1,6 +1,6 @@
 <template>
+  <main-header />
   <div :class="$style.container">
-    <main-header />
     <welcome-section />
     <main-section />
   </div>

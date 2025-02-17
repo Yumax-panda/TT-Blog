@@ -1,11 +1,11 @@
 <template>
   <header>
-    <router-link :to="'/'" :class="$style.container">
-      <div :class="$style.inner">
+    <div :class="$style.container">
+      <router-link :to="'/'" :class="$style.inner">
         <img :src="egg" alt="Yoshi's egg" />
         <span>東工大マリオカートサークル</span>
-      </div>
-    </router-link>
+      </router-link>
+    </div>
   </header>
 </template>
 
@@ -16,11 +16,14 @@ import egg from '/@/assets/yoshi_egg.webp'
 <style lang="scss" module scoped>
 $header-background-color: #2f6665;
 
+header {
+  top: 0;
+  position: sticky;
+}
+
 .container {
   font-weight: bold;
   width: 100%;
-  top: 0px;
-  position: sticky;
   display: flex;
   background-color: $header-background-color;
   height: 44px;
@@ -30,6 +33,10 @@ $header-background-color: #2f6665;
     height: 80px;
     font-size: 24px;
   }
+}
+
+.container:hover {
+  cursor: pointer;
 }
 
 .inner {
