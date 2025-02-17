@@ -18,10 +18,10 @@ import TwitterEmbed from './TwitterEmbed.vue'
 <style lang="scss" module>
 .title-wrapper {
   color: white;
-  background-color: rgba($color: #00803e, $alpha: 0.4);
   display: flex;
 
   @include size-h1;
+  @include color-common-bg-green;
 }
 
 .title {
@@ -29,9 +29,9 @@ import TwitterEmbed from './TwitterEmbed.vue'
 }
 
 .content {
-  background-color: rgba($color: #738da5, $alpha: 0.4);
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 0;
+  @include color-common-bg-gray;
 }
 </style>

@@ -59,7 +59,7 @@ $inkling-ratio: calc(348 / 492);
 }
 
 .link {
-  @include bg-color-common-white-primary;
+  @include color-common-bg-white-primary;
   color: #2c363f;
   font-size: 16px;
   padding: 4px;

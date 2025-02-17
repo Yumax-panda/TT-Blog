@@ -1,6 +1,15 @@
 $common-text-white-primary: rgb(238, 238, 238);
 $common-text-white-secondary: rgb(221, 221, 221);
 
+$common-bg-green: rgba(
+  $color: #00803e,
+  $alpha: 0.4
+);
+$common-bg-gray: rgba(
+  $color: #738da5,
+  $alpha: 0.4
+);
+
 $breakpoints: (
   'sm': 'screen and (min-width: 600px)',
   'md': 'screen and (min-width: 768px)',

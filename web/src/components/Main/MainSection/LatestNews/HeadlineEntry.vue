@@ -1,5 +1,8 @@
 <template>
-  <a :class="$style['panel-row']" :href="constructPostDetailPagePath(postId)">
+  <router-link
+    :class="$style['panel-row']"
+    :to="constructPostDetailPagePath(postId)"
+  >
     <img
       :src="thumbnailUrl"
       :alt="`${title} feature image`"
@@ -9,7 +12,7 @@
       <small>{{ getFullDayString(datetime) }}</small>
       <span>{{ title }}</span>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script setup lang="ts">

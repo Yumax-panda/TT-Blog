@@ -32,8 +32,16 @@
 
 // -----
 
-@mixin bg-color-common-white-primary {
+@mixin color-common-bg-white-primary {
   background-color: variables.$common-text-white-primary;
+}
+
+@mixin color-common-bg-green {
+  background-color: variables.$common-bg-green;
+}
+
+@mixin color-common-bg-gray {
+  background-color: variables.$common-bg-gray;
 }
 
 // -----
