@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 export enum RouteName {
   Index = 'index',
   About = 'about',
-  PostList = 'page',
+  PostList = 'pages',
   Contact = 'contact'
 }
 
