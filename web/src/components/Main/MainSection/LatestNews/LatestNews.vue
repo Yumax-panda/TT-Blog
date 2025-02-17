@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div :class="$style['title-wrapper']">
-      <span :class="$style.title">最新情報</span>
-    </div>
+    <div :class="$style.title">最新情報</div>
     <div :class="$style.content">
       <headline-list />
       <twitter-embed />
@@ -16,16 +14,12 @@ import TwitterEmbed from './TwitterEmbed.vue'
 </script>
 
 <style lang="scss" module>
-.title-wrapper {
+.title {
   color: white;
-  display: flex;
+  text-align: center;
 
   @include size-h1;
   @include color-common-bg-green;
-}
-
-.title {
-  margin: auto;
 }
 
 .content {
