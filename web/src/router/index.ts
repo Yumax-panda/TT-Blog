@@ -1,12 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
+import { settingsRoutes } from './settings'
 
-export enum RouteName {
-  Index = 'index',
-  About = 'about',
-  PostList = 'pages',
-  Contact = 'contact'
-}
+export const RouteName = {
+  Index: 'index',
+  About: 'about',
+  PostList: 'pages',
+  Settings: 'settings',
+  Contact: 'contact'
+} as const
 
 export const constructPostDetailPath = (id: string) => `/posts/${id}` as const
 export const constructPostListPath = (pageNumber: string | number) =>
@@ -15,6 +17,7 @@ export const constructPostListPath = (pageNumber: string | number) =>
 const MainPage = () => import('/@/views/MainPage.vue')
 const AboutPage = () => import('/@/views/AboutPage.vue')
 const PostListPage = () => import('/@/views/PostListPage.vue')
+const SettingsPage = () => import('/@/views/SettingsPage.vue')
 
 const routes: RouteRecordRaw[] = [
   {
@@ -31,6 +34,12 @@ const routes: RouteRecordRaw[] = [
     path: constructPostListPath(':pageNumber(\\d+)'),
     name: RouteName.PostList,
     component: PostListPage
+  },
+  {
+    path: '/settings/:setting?',
+    name: RouteName.Settings,
+    component: SettingsPage,
+    children: settingsRoutes
   }
 ]
 
