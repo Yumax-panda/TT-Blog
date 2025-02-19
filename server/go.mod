@@ -2,7 +2,10 @@ module github.com/Yumax-panda/TT-Blog
 
 go 1.23.1
 
-require github.com/gin-gonic/gin v1.10.0
+require (
+	github.com/gin-gonic/gin v1.10.0
+	github.com/gofrs/uuid v4.4.0+incompatible
+)
 
 require (
 	github.com/bytedance/sonic v1.12.3 // indirect
