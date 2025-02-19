@@ -1,5 +1,4 @@
 import type { RouteRecordRaw } from 'vue-router'
-import { RouteName } from '.'
 
 export const SettingsRouteName = {
   EditPost: 'posts',
@@ -8,8 +7,16 @@ export const SettingsRouteName = {
 } as const
 
 type RouteName = (typeof SettingsRouteName)[keyof typeof SettingsRouteName]
+type StaticRoutes = Omit<typeof SettingsRouteName, 'EditPost'>
+type StaticRouteName = StaticRoutes[keyof StaticRoutes]
+type DynamicRouteName = Exclude<RouteName, StaticRouteName>
 
-const constructSettingsPath = (name: RouteName) => `/settings/${name}` as const
+const constructSettingsStaticPath = (routeName: StaticRouteName) =>
+  `/settings/${routeName}` as const
+const constructSettingsDynamicPath = (
+  routeName: DynamicRouteName,
+  id: string
+) => `/settings/${routeName}/${id}` as const
 
 const EditPostPage = () => import('/@/views/Settings/EditPostPage.vue')
 const ManagePostPage = () => import('/@/views/Settings/ManagePostPage.vue')
@@ -17,17 +24,17 @@ const UserProfilePage = () => import('/@/views/Settings/UserProfilePage.vue')
 
 export const settingsRoutes: RouteRecordRaw[] = [
   {
-    path: `${constructSettingsPath('posts')}/:postId(\\d+)`,
+    path: constructSettingsDynamicPath('posts', ':postId(\\d+)'),
     name: SettingsRouteName.EditPost,
     component: EditPostPage
   },
   {
-    path: constructSettingsPath('dashboard'),
+    path: constructSettingsStaticPath('dashboard'),
     name: SettingsRouteName.ManagePost,
     component: ManagePostPage
   },
   {
-    path: constructSettingsPath('profile'),
+    path: constructSettingsStaticPath('profile'),
     name: SettingsRouteName.UserProfile,
     component: UserProfilePage
   }
