@@ -1,4 +1,4 @@
-FROM golang:1.23.1-alpine as server-build
+FROM golang:1.23.1-alpine AS server-build
 
 WORKDIR  /go/src/TT-Blog
 
