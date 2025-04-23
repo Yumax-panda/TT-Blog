@@ -57,7 +57,7 @@
   margin: 0 auto;
 }
 
-@mixin content-wrapper {
+@mixin colored-container {
   @include container;
   @include color-common-text-white-primary;
   background-color: rgb(34, 34, 34);

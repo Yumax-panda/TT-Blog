@@ -1,7 +1,7 @@
 <!-- TODO: ページの内容を足す (戦績、成果物etc) -->
 <template>
   <main-view-frame>
-    <content-wrapper>
+    <post-template>
       <section>
         <h1>東工大マリオカートサークルについて</h1>
         <p>
@@ -26,13 +26,13 @@
           自分の趣味をサークルのメンバーと気軽に共有して楽しめるのも本サークルの良いところです。
         </p>
       </section>
-    </content-wrapper>
+    </post-template>
   </main-view-frame>
 </template>
 
 <script lang="ts" setup>
-import ContentWrapper from '/@/components/UI/ContentWrapper.vue'
 import MainViewFrame from '/@/components/UI/MainViewFrame.vue'
+import PostTemplate from '/@/components/UI/Template/PostTemplate.vue'
 </script>
 
 <style lang="scss" module>

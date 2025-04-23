@@ -24,6 +24,7 @@ defineProps<{ posts: Row[] }>()
   display: flex;
   flex-wrap: wrap;
   gap: 1px;
+  contain: content;
   @include color-common-bg-gray;
 }
 </style>

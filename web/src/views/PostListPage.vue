@@ -1,17 +1,17 @@
 <!-- TODO: ページネーションを実装する -->
+
 <template>
   <main-view-frame>
-    <content-wrapper>
+    <div :class="$style.wrapper">
       <h1>投稿記事</h1>
       <post-list :posts="posts" />
-    </content-wrapper>
+    </div>
   </main-view-frame>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
 import PostList from '/@/components/UI/PostList/PostList.vue'
-import ContentWrapper from '/@/components/UI/ContentWrapper.vue'
 import MainViewFrame from '/@/components/UI/MainViewFrame.vue'
 
 // TODO: implement
@@ -90,3 +90,9 @@ const posts = reactive([
   }
 ])
 </script>
+
+<style lang="scss" module>
+.wrapper {
+  @include colored-container;
+}
+</style>

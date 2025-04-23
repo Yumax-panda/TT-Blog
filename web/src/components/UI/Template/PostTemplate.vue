@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.wrapper">
-    <div :class="$style.content">
+    <div :class="$style.container">
       <slot></slot>
     </div>
   </div>
@@ -8,12 +8,11 @@
 
 <style lang="scss" module>
 .wrapper {
-  @include content-wrapper;
+  padding: 5rem 0;
 }
 
-.content {
-  margin: 5rem auto;
-  padding: 1rem 0;
-  width: 80%;
+.container {
+  @include colored-container;
+  padding: 1rem;
 }
 </style>
